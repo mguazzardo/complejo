@@ -19,7 +19,7 @@ pipeline {
                     '''
             }
         }
-        stage('Deploy') {
+        stage('Test') {
             steps {
                 sh  '''
 		    echo 'probando el curl'
