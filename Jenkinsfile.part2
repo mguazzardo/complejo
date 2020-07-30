@@ -28,16 +28,5 @@ pipeline {
         }
     }
 
-
-    post
-        {
-            always
-            {
-            	sh '''
-                echo "borramos la imagen compilada"
-                docker rm -fv apache:01
-                '''
-            }
-        }
 }
 
