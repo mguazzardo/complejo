@@ -34,8 +34,9 @@ pipeline {
             always
             {
             	sh '''
-                echo "borramos la imagen compilada"
-                docker rm -fv apache:01 
+                echo "borramos la imagen compilada,y el contenedor"
+                docker rm -fv apache
+                docker rmi apache:01 
                 '''
             }
         }
