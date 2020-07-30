@@ -7,7 +7,7 @@ pipeline {
             sh '''
                     docker build -t apache:01 .
                     echo "Ahora lo corro"
-                    docker run -d --name apache apache01
+                    docker run -d --name apache apache:01
                     '''
 	    }
         }
