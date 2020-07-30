@@ -15,7 +15,8 @@ pipeline {
             steps {
                 sh  '''
                      echo Testeando hola mundo..
-                     curl 172.17.0.5
+                     chmod +x curl_test.sh
+                     ./curl_test.sh
                     '''
             }
         }
