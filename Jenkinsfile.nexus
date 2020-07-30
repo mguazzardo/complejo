@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "192.168.56.4:8123/apache-php"
+    registry = "mguazzardo/curso"
     registryCredential = 'nexus'
     dockerImage = ''
   }
@@ -21,7 +21,8 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( '', registryCredential ) {
+          docker.withRegistry( 'http://192.168.56.4:8123', registryCredential ) {
+
             dockerImage.push()
           }
         }
