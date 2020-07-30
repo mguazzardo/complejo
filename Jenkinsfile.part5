@@ -3,7 +3,6 @@ pipeline {
     registry = "mguazzardo/curso"
     registryCredential = 'nexus'
     dockerImage = ''
-    registryUri = 'https://192.168.56.4:8123'
   }
   agent any
   stages {
@@ -22,7 +21,8 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( 'registryUri', registryCredential ) {
+          docker.withRegistry( '192.168.56.4:8123', registryCredential ) {
+
             dockerImage.push()
           }
         }
