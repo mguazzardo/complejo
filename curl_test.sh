@@ -8,6 +8,7 @@ date=`date`
 if [ $status_code -eq "200" ]
 then
         echo "todo ok $date"
+	curl $url
 else
 	echo "fallo $date"
 	// tirar codigo de error, exit 1
