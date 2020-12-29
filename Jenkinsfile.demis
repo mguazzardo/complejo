@@ -5,7 +5,7 @@ pipeline {
         stage('probando') {
             steps {
                 sh '''
-                ssh root@172.17.0.1 sudo useradd -m pepe 
+                ssh root@172.17.0.1 /root/crear_pepe.sh 
                 ssh root@172.17.0.1 sudo "echo 'pepe:pepe' | sudo chpasswd" 
 		ssh root@172.17.0.1 id > /tmp/salida
 		 '''
