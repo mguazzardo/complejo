@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('probando') {
+            steps {
+                sh '''
+                ssh root@172.17.0.1 sudo useradd -m pepe 
+                ssh root@172.17.0.1 sudo "echo 'pepe:pepe' | sudo chpasswd"           
+		 '''
+            }
+        }
+    }
+}
+
