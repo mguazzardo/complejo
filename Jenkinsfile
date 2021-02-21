@@ -12,7 +12,7 @@ pipeline
                 {
                     
 		    sh '''
-                    oc new-app php73~https://github.com/mguazzardo/complejo.git 
+                    oc new-app php7.3-centos~https://github.com/mguazzardo/complejo.git 
                     '''
                 }
             }
