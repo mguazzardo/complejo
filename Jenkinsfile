@@ -12,7 +12,8 @@ pipeline
                 {
                     
 		    sh '''
-                    oc new-app php7.3-centos~https://github.com/mguazzardo/complejo.git --name=complejo2
+                    oc new-app php7.3-centos~https://github.com/mguazzardo/complejo.git --name=php-complejo
+		    oc expose svc php-complejo
                     '''
                 }
             }
