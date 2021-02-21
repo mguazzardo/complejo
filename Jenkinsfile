@@ -12,7 +12,7 @@ pipeline
                 {
                     
 		    sh '''
-                    docker build -t apache:01 .
+                    oc new-app php:7.3~https://github.com/mguazzardo/complejo.git 
                     '''
                 }
             }
