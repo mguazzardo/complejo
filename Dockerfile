@@ -1,12 +1,6 @@
-FROM eboraas/apache-php
+FROM mguazzardo/propio-php 
 
-ADD info.php /var/www/html
+COPY hola.html /var/www/html
 
-EXPOSE 80
-EXPOSE 443
-
-CMD ["/usr/sbin/apache2ctl","-D","FOREGROUND"]
-
-
-
-
+EXPOSE 8080
+CMD ["apache2-foreground"]
